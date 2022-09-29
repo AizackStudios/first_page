@@ -27,8 +27,7 @@ li{
 	z-index: -1;
 	width: 100%;
 	height: 100%;
- 	background-image: linear-gradient(to top, #000000, #1e0a10, #320f1a, #480f22, #5f0c29, #5f0c29, #5f0c29, #5f0c29, #480f22, #320f1a, #1e0a10, #000000);
-}
+ background-image: linear-gradient(to top, #00ffff, #00d3d8, #00a9b0, #008189, #005b63, #064753, #0d3341, #0e212d, #151924, #151219, #0f090d, #000000);}
 
 .constelacion {
 	position: absolute;
@@ -47,6 +46,7 @@ h1{
 	text-align: center;
 	letter-spacing: 5px;
 }
+
 
 
 button {
@@ -139,4 +139,86 @@ button:hover i::after {
 	position: absolute;
 	bottom: 0;
 	color: #fff;
+}
+
+
+/* From uiverse.io by @david-mohseni */
+.flip {
+  box-shadow: 0 0 30px #00ffe1;
+  padding: 1em;
+  width: 190px;
+  height: 254px;
+  transform-style: preserve-3d;
+  transition: 2.5s ease;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+
+.flip:hover {
+  transform: rotateY(180deg);
+}
+/* Content */
+.flip .content {
+  transform-style: preserve-3d;
+  padding-top: 70px ;
+}
+
+.flip .back, .flip .front {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip .back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.flip h2,
+.flip p {
+  transform: translateZ(90px);
+  text-shadow: 0 0 5px black;
+  text-align: center;
+}
+
+.flip h2 {
+  font-size: 1.8em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.flip p {
+  font-size: 1em;
+  color: #eee;
+  line-height: 1.6em;
+  padding-top: 50px;
+}
+
+.flip::before,
+.flip::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: linear-gradient(#00ffe1, black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg)translateZ(1px);
+}
+
+.flip::before {
+  transform: none;
+  background-image: linear-gradient(#00ffe1, black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
