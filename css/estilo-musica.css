@@ -54,20 +54,6 @@ button:hover:after {
   left: 0px;
 }
 
-
-.espacio_en_blanco{
-	height: 3.8em;
-	width: 100%;
-}
-
-.bordevideo{
-	text-align: center;
-}
-
-iframe{
-	padding-left: 1em;
-}
-
 .fondo{
 	position: fixed;
 	z-index: -1;
@@ -76,3 +62,15 @@ iframe{
 	height: 100%;
 	background-image: url(../fotos/intertwined.gif);
 }
+
+
+h1{
+padding-top: 2.4em;
+text-align: center;
+font-size: 3em;
+font-family: cursive;
+color: #ffeceb;
+text-shadow: 4px 4px 5px #b27371;
+}
+
+
