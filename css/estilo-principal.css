@@ -2,178 +2,225 @@
 	padding: 0;
 	margin: 0;
 }
-span a{
-	text-decoration: none;
-	color: #befbff;
-	text-shadow: 0px 0px 10px #ff85a7,0px 0px 10px #ff85a7;
-}
-footer a{
-	text-decoration: none;
-	color: #FC5B00;
-}
 
-.menu{
-	position: absolute;
-	top: 25em;
-	width: 100%;
-	text-align: center;
-}
-
-
-li{
-	display: inline-block;
-	padding: 0em .4em;
-}
-
-.fondo__1{
-	display: inline-block;
-	position: fixed;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	background-image: linear-gradient(to bottom, #ffce8f, #ffbd97, #ffacb0, #ffa4d6, #ffa7ff);
- }
-
-.constelacion {
-	position: absolute;
-	z-index: -1;
-	mix-blend-mode:color-burn;
-	left: 28%;
+video{
+  position: absolute;
+  z-index: -1;
 }
 
 h1{
-	padding-top: 1em;
-	display: block;
-	font-family: 'Libre Barcode 39 Text', cursive;
-	font-size: 4.4em;
-	color: #006f8a;
-	text-align: center;
-	letter-spacing: 10px;
+  text-align: center;
+  padding-top: 3em;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3.5em;
+  color: lightyellow;
+  text-shadow: 0px 0px 10px #f8f2cb, 0px 0px 5px #f8f2cb;
 }
 
-
+.menu{
+  display: flex;
+  /*justify-content: space-evenly;*/
+  justify-content: center;
+}
 
 button {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 10px 30px;
-  transition: 0.5s;
   position: relative;
-  font-size: 25px;
-  background: #333;
+  width: 11em;
+  height: 4em;
+  outline: none;
+  transition: 0.1s;
+  background-color: transparent;
   border: none;
-  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  color: wheat;
+  margin: 0 100px;
 }
 
-button:hover {
-  letter-spacing: 0.25em;
-  background: #ff1867;
-  color: #ff1867;
-  box-shadow: 0 0 45px #ff1867;
-}
-
-button::before {
-  content: '';
+a{
   position: absolute;
-  inset: 2px;
-  background: #222222;
-}
-
-button span {
-  position: relative;
   z-index: 1;
+  width: 110px;
+  text-decoration: none;
+  color: wheat;
+  margin: -4px -50px;
 }
 
-button i {
+#clip {
+  --color: transparent;
   position: absolute;
-  inset: 0;
-  display: block;
-}
-
-button i::before {
-  content: '';
-  position: absolute;
-  border: 2px solid #ff1867;
-  width: 7px;
-  height: 4px;
-  top: -3.5px;
-  left: 80%;
-  background: #222222;
-  transform: translateX(-50%);
-  transition: 0.5s;
-}
-
-button:hover i::before {
-  width: 20px;
-  left: 20%;
-}
-
-button i::after {
-  content: '';
-  position: absolute;
-  border: 2px solid #ff1867;
-  width: 7px;
-  height: 4px;
-  bottom: -3.5px;
-  left: 20%;
-  background: #222222;
-  transform: translateX(-50%);
-  transition: 0.5s;
-}
-
-button:hover i::after {
-  width: 20px;
-  left: 80%;
-}
-
-
-
-.parrafo{
-	padding-top: .1em;
-	text-align: center;
-	color: #006f8a;
-	font-family: 'Fredericka the Great', cursive;
-	margin: 10px;
-	font-size: 3.5em;
-}
-
-
-
-.piedepagina{
-	position: fixed;
-	bottom: 2px;
-	color: #000;
-	display: inline-block;
-}
-
-
-/* From uiverse.io by @satyamchaudharydev */
-.card {
-  --bg: transparent; /*color fondo principal*/
-  --hover-bg: background-image: radial-gradient(circle, #ffdc7b, #d8eb8d, #b2f6ae, #92fcd5, #82fff9);/*color fondo secundario*/
-  --hover-text: #000;/*color texto secundario*/
-  max-width: 23ch;
-  text-align: center;
-  background: var(--bg);
-  padding: 1.5em;
-  padding-block: 1.8em;
-  border-radius: 5px;
-  position: fixed;
+  top: 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.arrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: transparent;
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+
+#leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 102%;
+}
+
+button:hover #rightArrow {
+  background-color: wheat;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+button:hover #leftArrow {
+  background-color: wheat;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: transparent;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+#rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+
+#leftTop {
+  top: -1.96em;
+  left: -3.0em;
+}
+
+#leftBottom {
+  top: 2.10em;
+  left: -2.15em;
+}
+
+#rightBottom {
+  top: 45%;
+  left: 88%;
+}
+
+button:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+button:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: wheat;
+}
+
+@keyframes changeColor8 {
+  from {
+    background-color: wheat;
+  }
+
+  to {
+    background-color: wheat;
+  }
+}
+
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px wheat;
+  }
+
+  to {
+    box-shadow: 0 0 2px wheat;
+  }
+}
+
+@keyframes greenLight8 {
+  from {
+  }
+
+  to {
+    box-shadow: inset 0px 0px 32px wheat;
+  }
+}
+
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+}
+
+.card {
+  --bg: transparent; /*fondo carta*/
+  --hover-bg: #4E0A12; /*fondo carta 2*/
+  --hover-text: #C2F126; /*color texto 2*/
+  width: 5.3em;
+  height: 3.7em;
+  text-align: left;
+  background: var(--bg);
+  padding: 3.5em;
+  border-radius: 5px;
+  position: relative;
+  overflow: visible;
   transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
-  bottom: 30px;
-  right: 30px;
-}
-
-.card__body {
-  color: #464853;
-  line-height: 1.5em;
-  font-size: 1em;
 }
 
 .card > :not(span) {
@@ -182,10 +229,14 @@ button:hover i::after {
 
 .card > strong {
   display: block;
-  font-size: 2em;
+  font-size: 1.4rem;
   letter-spacing: -.035em;
-  color: ;
-  font-family: 'Annie Use Your Telescope', cursive;
+  color: #C2F126;
+  font-family: 'Space Mono', monospace;
+  animation-duration: 2s;
+  animation-name: titilar;
+  animation-iteration-count: infinite;
+
 }
 
 .card span {
@@ -194,14 +245,16 @@ button:hover i::after {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  padding: 0 20px;
   align-items: center;
   color: var(--hover-text);
   border-radius: 5px;
   font-weight: bold;
   top: 100%;
   transition: all .3s cubic-bezier(.6,.4,0,1);
-  font-family: 'Averia Serif Libre', cursive;
+  font-family: 'Space Mono', monospace;
+  background-color: var(--hover-bg);
+
 }
 
 .card:hover span {
@@ -209,10 +262,18 @@ button:hover i::after {
   font-size: 1.2em;
 }
 
-.card:hover {
- background-color: transparent;
-}
 
 .card:hover>div,.card:hover>strong {
   opacity: 0;
+}
+
+
+@keyframes titilar{
+  from{
+    opacity: 100%;
+  }
+
+  to{
+    opacity: 0%;
+  }
 }

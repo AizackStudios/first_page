@@ -6,8 +6,8 @@
 
 .menu{
 	position: fixed;
- 	background-image: linear-gradient(to right, #008fa2, #00a2ad, #00b6b3, #00c9b4, #00dbb0);
-   	width: 100%;
+ 	background-image: linear-gradient(to left, #540f35, #662246, #793457, #8c4569, #a0577b, #a0577b, #a0577b, #a0577b, #8c4569, #793457, #662246, #540f35);
+  width: 100%;
 	height: 3.8em;
 }
 
@@ -44,7 +44,7 @@ button:after {
   top: 7px;
   left: 7px;
   height: 100%;
-  background-color: #d1fae0;  
+  background-color: #efefdc;  
   z-index: -1;
   transition: all 0.35s;
   border-radius: inherit;
@@ -58,7 +58,7 @@ button:hover:after {
 
 h1{
 	padding-top: 4.3em;
-	background-image: linear-gradient(to right, #008fa2, #00a2ad, #00b6b3, #00c9b4, #00dbb0);
+	 background-image: linear-gradient(to left, #540f35, #662246, #793457, #8c4569, #a0577b, #a0577b, #a0577b, #a0577b, #8c4569, #793457, #662246, #540f35);
 	text-align: center;
 }
 
@@ -71,15 +71,15 @@ h1{
 	display: flex;
 	padding: 5px;
 	flex-wrap: wrap;
-	background-image: linear-gradient(to right, #008fa2, #00a2ad, #00b6b3, #00c9b4, #00dbb0);
+	background-image: linear-gradient(to left, #540f35, #662246, #793457, #8c4569, #a0577b, #a0577b, #a0577b, #a0577b, #8c4569, #793457, #662246, #540f35);
 
 }
 
 .column img{
 	width: 100%;
 	padding-top: 0px;
-	border: 4px solid #e6f4f1;
-	border-bottom: 40px solid #e6f4f1;
+	border: 4px solid #efefdc;
+	border-bottom: 40px solid #efefdc;
 	margin-top: 7px;
 	border-radius: 15px;
 }

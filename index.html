@@ -1,73 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Para canela</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo-principal.css">
-	<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,700&display=swap" rel="stylesheet">
-</head>
-		
-<body>
-	<canvas class="fondo__1"></canvas>
-		<img class="constelacion" src="fotos/constelacion.png">
-			<header class="menu">
-				<nav class="menu__nav">
-					<div class="menu__nav-div">
-						<ul class="menu__nav-div-ul">
-							<li><button><span><a href="html/fotos.html">Fotos</a></span><i></i></button></li>
-							<li><button><span><a href="html/musica.html">Música</a></span><i></i></button></li>
-							<li><button><span><a href="html/dibujos.html">RECUERDOS</a></span><i></i></button></li>
-							<li><button><span><a href="html/mascota.html">Mascota</a></span><i></i></button></li>
-						</ul>
-					</div>
-				</nav>
-			</header>
-
-
-			<article>
-				<section>
-					<div>
-						<h1>BIZCOCHITO</h1>
-					</div>
-				</section>
-			</article>
-
-
-			<div>
-				<p class="parrafo">Bienvenida a la primera beta de la página inspirada en <br><b><i>❀Canela❀</i></b></p>
-			</div>
-
-
-
-
-
-
-
-
-
-			<footer class="piedepagina">
-				<p>
-					Melocotón-Todos los Dinoderechos reservados
-				</p>
-				<p>Síguenos en nuestras redes sociales</p>
-				<ul>
-					<li><a href="https://www.facebook.com/profile.php?id=100005984205174">Facebook</a></li>
-					<li><a href="https://www.instagram.com/isaaccartuche/">Instagram</a></li>
-				</ul>
-
-			</footer>
+	<head>
+		<meta charset="utf-8">
+		<title>Para canela</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo-principal.css">
+		<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet"> 
+	</head>
 			
-				<div class="card">
-				    <strong> 
-				    	FRASE DE LA SEMANA
-				    </strong>
-				    <span>Las tormentas llegan y la mente falla, pero el alma grita contra la marea y proclama su esperanzador afán</span>
-				</div>
+	<body style="overflow-y:hidden">
+		<video src="videos/spaceFondo.mp4" width="100%" autoplay muted loop></video>
+		<h1>CANELA</h1>
 
+		<div class="menu">
+				<button>
+				    <a href="html/fotos.html">F O T O S</a>
+				    <div id="clip">
+				        <div id="leftTop" class="corner"></div>
+				        <div id="rightBottom" class="corner"></div>
+				        <div id="rightTop" class="corner"></div>
+				        <div id="leftBottom" class="corner"></div>
+				    </div>
+				    <span id="rightArrow" class="arrow"></span>
+				    <span id="leftArrow" class="arrow"></span>
+				</button>
 
-		</body>
+				<button>
+				    <a href="html/recuerdos.html">R E C U E R D O S</a>
+				    <div id="clip">
+				        <div id="leftTop" class="corner"></div>
+				        <div id="rightBottom" class="corner"></div>
+				        <div id="rightTop" class="corner"></div>
+				        <div id="leftBottom" class="corner"></div>
+				    </div>
+				    <span id="rightArrow" class="arrow"></span>
+				    <span id="leftArrow" class="arrow"></span>
+				</button>
+		</div>
+
+		<footer>
+			<div class="card">
+			    <strong> Tiene un mensaje</strong>
+			    <span>la frase de la semana no está disponible</span>
+			</div>
+		</footer>	
+	</body>
 
 </html>
